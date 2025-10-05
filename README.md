@@ -24,7 +24,7 @@ This is a personal Notes Web Application where users can register, log in, and m
 2. Run `npm install`
 3. Start frontend: `npm start`
 **Note:** If you see a message like “Would you like to run the app on another port instead?”, just type `y` or `yes` to continue.
-4. Open `http://localhost:3001` in your browser
+4. Open `http://localhost:3000` in your browser
 
 ## API Documentation
 - Swagger: `http://localhost:3000/api/docs`
