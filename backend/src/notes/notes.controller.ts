@@ -1,7 +1,12 @@
 import { Controller, Get, Post, Delete, Put, Body, UseGuards, Request, Param } from '@nestjs/common';
 import { NotesService } from './notes.service';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import { CreateNoteDto } from './dto/create-note.dto';
+import { UpdateNoteDto } from './dto/update-note.dto';
+import { ApiTags, ApiBearerAuth } from '@nestjs/swagger';
 
+@ApiTags('notes')
+@ApiBearerAuth()
 @Controller('notes')
 @UseGuards(JwtAuthGuard)
 export class NotesController {
@@ -13,16 +18,12 @@ export class NotesController {
   }
 
   @Post()
-  addNote(@Request() req, @Body() body: { title: string; content: string }) {
+  addNote(@Request() req, @Body() body: CreateNoteDto) {
     return this.notesService.createForUserId(req.user.userId, body.title, body.content);
   }
 
   @Put(':id')
-  updateNote(
-    @Request() req,
-    @Param('id') id: number,
-    @Body() body: { title?: string; content?: string },
-  ) {
+  updateNote(@Request() req, @Param('id') id: number, @Body() body: UpdateNoteDto) {
     return this.notesService.updateByUserId(id, req.user.userId, body.title, body.content);
   }
 

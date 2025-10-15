@@ -31,12 +31,10 @@ const Dashboard = () => {
   const addOrUpdateNote = async () => {
     try {
       if (editingNote) {
-        // Update existing note
         const res = await axios.put(`/notes/${editingNote.id}`, { title, content });
         setNotes(notes.map((n) => (n.id === editingNote.id ? res.data.note : n)));
         setEditingNote(null);
       } else {
-        // Create new note
         const res = await axios.post("/notes", { title, content });
         setNotes([...notes, res.data]);
       }

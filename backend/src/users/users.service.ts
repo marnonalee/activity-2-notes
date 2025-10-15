@@ -19,4 +19,4 @@ export class UsersService {
     const user = this.usersRepo.create({ email, password: hashed });
     return this.usersRepo.save(user);
   }
-}
+} 
