@@ -4,17 +4,30 @@ html, body {
   margin: 0;
 }
 
+.dashboard-content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 2rem;
+}
+
+/* Dashboard Container */
 .dashboard-container {
   min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  background: #e2e8f0;
+  background: url("/public/act2.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden;
   padding: 2rem;
   box-sizing: border-box;
   font-family: "Segoe UI", Roboto, sans-serif;
-  color: #1e293b;
+  color: #1a1a1a; 
 }
+
 
 .dashboard-header {
   display: flex;

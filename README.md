@@ -13,22 +13,40 @@ This is a personal Notes Web Application where users can register, log in, and m
 ## How to Run
 
 ### Backend
-1. Navigate to the backend folder `cd backend`
+1. Navigate to the backend folder: `cd backend`
 2. Run `npm install`
 3. Configure `.env` with database credentials
-4. Start server: `npm run start:dev`
-5. API available at `http://localhost:3000`
+4. Start server: `npm run start`
+5. API available at `http://localhost:4000`
 
 ### Frontend
-1. Navigate to the backend folder `cd frontend`
+1. Navigate to the frontend folder: `cd frontend`
 2. Run `npm install`
-3. Start frontend: `npm start`
-**Note:** If you see a message like “Would you like to run the app on another port instead?”, just type `y` or `yes` to continue.
+3. Start frontend: `npm run start`  
+**Note:** If prompted to run on another port, type `y` or `yes`
 4. Open `http://localhost:3000` in your browser
 
 ## API Documentation
-- Swagger: `http://localhost:3000/api/docs`
+- Swagger: `http://localhost:3000/api`
 - Postman: Import Postman collection to test endpoints
+
+## API Endpoints Summary
+
+| Method | Endpoint | Description |
+|--------|---------|-------------|
+| POST   | /auth/register | Register a new user |
+| POST   | /auth/login    | Login as existing user |
+| GET    | /notes         | Get all notes of the logged-in user |
+| POST   | /notes         | Add a new note |
+| PUT    | /notes/{id}    | Update an existing note |
+| DELETE | /notes/{id}    | Delete a note |
+
+## Visual Flow
+- Login/Register Page
+- Dashboard showing notes
+- Add Note Page
+- Edit Note Page
+- Delete Note Page
 
 ## Technologies Used
 - ReactJS
@@ -36,4 +54,3 @@ This is a personal Notes Web Application where users can register, log in, and m
 - MySQL
 - JWT for authentication
 - Swagger & Postman for API testing
-
