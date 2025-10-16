@@ -16,8 +16,9 @@ This is a personal Notes Web Application where users can register, log in, and m
 1. Navigate to the backend folder: `cd backend`
 2. Run `npm install`
 3. Configure `.env` with database credentials
-4. Start server: `npm run start`
-5. API available at `http://localhost:4000`
+4. Start server (e.g., via XAMPP/Laravel/other setup)
+5. Start server: `npm run start`
+6. API available at `http://localhost:4000`
 
 ### Frontend
 1. Navigate to the frontend folder: `cd frontend`
